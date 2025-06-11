@@ -20,6 +20,23 @@ function showPrediction() {
     el.textContent = randomPrediction();
 }
 
+function copyPrediction() {
+    navigator.clipboard.writeText(el.textContent);
+}
+
+async function sharePrediction() {
+    if (navigator.share) {
+        try {
+            await navigator.share({ text: el.textContent });
+        } catch (_) {}
+    } else {
+        copyPrediction();
+        alert('Prediction copied to clipboard');
+    }
+}
+
 document.getElementById('next').addEventListener('click', showPrediction);
+document.getElementById('copy').addEventListener('click', copyPrediction);
+document.getElementById('share').addEventListener('click', sharePrediction);
 
 showPrediction();
