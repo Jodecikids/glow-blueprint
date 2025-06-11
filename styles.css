@@ -2,168 +2,65 @@
     box-sizing: border-box;
 }
 body {
-    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    line-height: 1.6;
-}
-.hero {
-    text-align: center;
-    padding: 4rem 1rem;
-    background: linear-gradient(135deg, teal, purple);
-    color: white;
-}
-.hero button {
-    margin-top: 1rem;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    color: white;
-    background: linear-gradient(135deg, teal, purple);
-    cursor: pointer;
-}
-section {
-    padding: 2rem 1rem;
-}
-.quiz {
-    background: #f9f9f9;
-}
-.quiz form {
+    font-family: 'Courier New', monospace;
+    background: radial-gradient(#000, #111);
+    color: #ccc;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    max-width: 400px;
-    margin: auto;
-}
-.quiz button {
-    background: linear-gradient(135deg, teal, purple);
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-}
-.features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-}
-.feature {
-    background: white;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-.steps ol {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-.testimonials {
-    background: #f9f9f9;
-    position: relative;
-}
-.carousel {
-    max-width: 600px;
-    margin: auto;
-}
-.testimonial {
-    display: none;
-    text-align: center;
-}
-.testimonial.active {
-    display: block;
-}
-.lead-in form {
-    display: flex;
     justify-content: center;
-    gap: 0.5rem;
+    align-items: center;
 }
-.lead-in input {
-    padding: 0.5rem;
-}
-.lead-in button {
-    background: linear-gradient(135deg, teal, purple);
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-}
-.routine-builder {
-    background: #f9f9f9;
-}
-.products {
-    display: flex;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-}
-.product {
-    background: white;
-    padding: 0.5rem 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    cursor: grab;
-}
-.calendar {
-    display: flex;
-    gap: 1rem;
-}
-.day {
-    flex: 1;
-    min-height: 100px;
-    background: white;
-    border: 1px dashed #ccc;
-    border-radius: 4px;
-    padding: 0.5rem;
-}
-.final-cta {
+.container {
     text-align: center;
+    padding: 2rem;
 }
-.final-cta button {
-    background: linear-gradient(135deg, teal, purple);
-    color: white;
-    border: none;
-    padding: 0.75rem 1.5rem;
+.glitch {
+    position: relative;
+    font-size: 2.5rem;
+    color: #fff;
+}
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+}
+.glitch::before {
+    text-shadow: -2px 0 magenta;
+    clip: rect(2px, 9999px, 44px, 0);
+    animation: glitch 2s infinite linear alternate-reverse;
+}
+.glitch::after {
+    text-shadow: -2px 0 cyan;
+    clip: rect(42px, 9999px, 80px, 0);
+    animation: glitch 1.5s infinite linear alternate-reverse;
+}
+@keyframes glitch {
+    0% { transform: translate(0,0); }
+    20% { transform: translate(-2px,2px); }
+    40% { transform: translate(-2px,-2px); }
+    60% { transform: translate(2px,2px); }
+    80% { transform: translate(2px,-2px); }
+    100% { transform: translate(0,0); }
+}
+.prediction {
+    font-size: 1.2rem;
+    margin: 2rem 0;
+}
+button {
+    padding: 0.5rem 1rem;
+    background: transparent;
+    border: 1px solid #888;
+    color: #ccc;
     cursor: pointer;
 }
 footer {
-    background: #333;
-    color: #eee;
+    margin-top: auto;
     padding: 1rem;
-    text-align: center;
-}
-footer nav a {
-    color: #eee;
-    margin: 0 0.5rem;
-}
-footer .social span {
-    margin: 0 0.25rem;
-}
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0,0,0,0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.modal.hidden {
-    display: none;
-}
-.modal-content {
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    position: relative;
-}
-#closeModal {
-    position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
-    cursor: pointer;
-}
-@media (min-width: 600px) {
-    .steps ol {
-        flex-direction: row;
-        justify-content: space-between;
-    }
+    color: #555;
 }
