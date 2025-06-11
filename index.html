@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15-Day Glow Blueprint</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Stop Guessing. Start Glowing. Achieve Radiant, Confident Skin in Just 15 Days.</h1>
+        <p>Created by skincare chemists and pro aestheticians—your minimalist, science-backed guide to glowing skin without the guesswork.</p>
+        <button id="startQuiz">Build My Custom 15-Day Routine</button>
+    </section>
+
+    <!-- Quiz Section -->
+    <section class="quiz" id="quiz">
+        <h2>Take our 60-second quiz to unlock the perfect daily AM/PM routine tailored to YOUR skin type and goals.</h2>
+        <form id="quizForm">
+            <label>Skin Type
+                <select name="skinType" required>
+                    <option value="">Choose one</option>
+                    <option>Dry</option>
+                    <option>Oily</option>
+                    <option>Combination</option>
+                    <option>Sensitive</option>
+                </select>
+            </label>
+            <label>Top Concern
+                <select name="concern" required>
+                    <option value="">Choose one</option>
+                    <option>Acne</option>
+                    <option>Fine Lines</option>
+                    <option>Dullness</option>
+                    <option>Redness</option>
+                </select>
+            </label>
+            <label>Lifestyle
+                <select name="lifestyle" required>
+                    <option value="">Choose one</option>
+                    <option>Busy Professional</option>
+                    <option>Student</option>
+                    <option>Parent</option>
+                </select>
+            </label>
+            <button type="submit">Build My Routine</button>
+        </form>
+        <button id="openModal">Get My Free 3-Day Glow Boost PDF</button>
+    </section>
+
+    <!-- Key Features Grid -->
+    <section class="features">
+        <div class="feature">
+            <h3>Conflict Detection</h3>
+            <p>Never mix Retinol + Vitamin C again—our Engine flags harmful combos to prevent irritation.</p>
+        </div>
+        <div class="feature">
+            <h3>Expiration Tracking</h3>
+            <p>Log each product’s open date and see real-time alerts when serums or creams lose potency.</p>
+        </div>
+        <div class="feature">
+            <h3>Visual Routine Builder</h3>
+            <p>Drag your products onto an AM/PM calendar and watch your perfect regimen assemble itself.</p>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="steps">
+        <h2>How It Works</h2>
+        <ol>
+            <li>Import Your Products – Snap a photo or select from our database.</li>
+            <li>Answer a Few Questions – Personalize by skin type and concern.</li>
+            <li>Review Your 15-Day Plan – See daily routines, mask recipes, and mindset tips.</li>
+            <li>Track & Optimize – Check off completed steps and get alerts for expiring products.</li>
+        </ol>
+    </section>
+
+    <!-- Testimonials Carousel -->
+    <section class="testimonials">
+        <div class="carousel">
+            <figure class="testimonial active">
+                <blockquote>“By Day 5 my texture was smoother—no more breakouts!”</blockquote>
+                <figcaption>— Lisa, 28</figcaption>
+            </figure>
+            <figure class="testimonial">
+                <blockquote>“This tool stopped my $300/month product waste!”</blockquote>
+                <figcaption>— Maria, 35</figcaption>
+            </figure>
+            <figure class="testimonial">
+                <blockquote>“I actually stuck to it—and my glow shows!”</blockquote>
+                <figcaption>— Alex, 24</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- Free Lead-In -->
+    <section class="lead-in">
+        <h2>Ready for a Quick Glow? Try Our Free 3-Day Boost</h2>
+        <p>Coming soon: a free, bite-sized PDF that jumpstarts your radiance in just 3 days. Enter your email to be the first to download!</p>
+        <form id="leadForm">
+            <input type="email" placeholder="Your email" required>
+            <button type="submit">Get My Free 3-Day PDF</button>
+        </form>
+    </section>
+
+    <!-- Routine Builder -->
+    <section class="routine-builder">
+        <h2>Your 15-Day Routine</h2>
+        <div id="productList" class="products">
+            <!-- Placeholder items -->
+            <div class="product" draggable="true">Cleanser</div>
+            <div class="product" draggable="true">Moisturizer</div>
+            <div class="product" draggable="true">SPF</div>
+        </div>
+        <div class="calendar">
+            <div class="day" id="am">AM</div>
+            <div class="day" id="pm">PM</div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <p>Stop wasting money on products that sit unused. Unlock your personal skincare chemist today.</p>
+        <button id="finalBtn">Start My 15-Day Routine</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <nav>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact</a>
+        </nav>
+        <div class="social">
+            <!-- Placeholder icons -->
+            <span>FB</span>
+            <span>IG</span>
+            <span>TW</span>
+        </div>
+        <small>© 2024 15-Day Glow Blueprint</small>
+    </footer>
+
+    <!-- Modal for PDF signup -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="closeModal">&times;</span>
+            <h3>Get Your Free 3-Day Glow Boost PDF</h3>
+            <form id="modalForm">
+                <input type="email" placeholder="Email" required>
+                <button type="submit">Send Me The PDF</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
